@@ -1,0 +1,104 @@
+body, html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #eee;
+
+  width: 200px;
+  height: 150px;
+}
+
+body,
+button,
+input {
+  font-size: 11px;
+}
+
+input,
+select,
+button {
+  border: solid 5px #d8d8d8;
+  background-color: #fff;
+  outline: none;
+}
+input[type=button],
+select,
+button {
+  cursor: pointer;
+}
+button:active,
+input[type=button]:active {
+  opacity: 0.7;
+}
+
+select {
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(arrow.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 0;
+}
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+button * {
+  pointer-events: none;
+}
+
+#toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+#toolbar input {
+  width: 25px;
+  height: 25px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 120%;
+  margin: 5px;
+  color: #fff;
+  border: none;
+}
+
+#toolbar input:nth-child(1) {
+  background-color: #c1c1c1;
+}
+
+#filling,
+#filling div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#filling button,
+#filling select {
+  height: 80px;
+}
+#filling button {
+  overflow: hidden;
+  width: 140px;
+  line-height: 16px;
+}
+#filling select {
+  width: 16px;
+  text-indent: 30px;
+  border-left: none;
+}
+#filling input {
+  width:  156px;
+  height: 30px;
+  text-align: center;
+  border-top: none;
+  -webkit-appearance: none;
+}

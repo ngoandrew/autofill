@@ -1,0 +1,105 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0;
+  font-family: "Helvetica Neue",Helvetica,sans-serif;
+  font-size: 13px;
+
+  min-width: 600px;
+  min-height: 500px;
+}
+table {
+  width: 100%;
+}
+input[type=button] {
+  border: solid 1px #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+input[type=text] {
+  text-indent: 5px;
+}
+input[type=text],
+input[type=button] {
+  height: 26px;
+  box-sizing: border-box;
+}
+code {
+  padding: 0 3px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#tabs {
+  z-index: 10;
+}
+#tabs>span {
+  display: inline-block;
+  border: solid 1px #ccc;
+  padding: 2px 5px;
+  background-color: #eee;
+  margin-bottom: -1px;
+  min-width: 100px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  cursor: pointer;
+}
+#tabs>span[data-active=true] {
+  background-color: #fff;
+  border-bottom: solid 1px #fff;
+}
+#panels {
+  border: solid 1px #ccc;
+}
+#panels>div {
+  padding: 10px;
+}
+#panels>div:not([data-active=true]) {
+  display: none;
+}
+#save {
+  padding: 5px 0;
+}
+input[readonly],
+#profile td:first-child {
+  color: #888;
+  cursor: default;
+}
+
+[hbox] {
+  display: flex;
+  flex-direction: row;
+}
+[vbox] {
+  display: flex;
+  flex-direction: column;
+}
+[flex="1"] {
+  flex: 1;
+}
+[pack=center] {
+  justify-content: center;
+}
+[pack=end] {
+  justify-content: flex-end;
+}
+[align=center] {
+  align-items: center;
+}
+[space="2"]>* {
+  margin: 2px;
+}
+
+.notes {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 80%;
+}
+.editable input[type=text] {
+  border-color: transparent;
+}
+.editable input[type=text]:not([readonly]):active {
+  border-color: blue;
+}

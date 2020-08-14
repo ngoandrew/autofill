@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>AutoFill Forms :: Options</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body vbox>
+      <div hbox align=center space=2 style="padding-bottom: 5px;">
+        <select id="users" flex=1></select>
+        <input type="button" value="Duplicate" data-cmd="duplicate">
+        <input type="button" value="Delete" data-cmd="delete" disabled="true">
+        <input type="button" value="Rename" data-cmd="rename" disabled="true">
+        <input type="text" placeholder="new name" id="rename">
+      </div>
+        <div flex=1 style="overflow: auto;" hbox id="profile">
+          <template>
+            <tr>
+              <td><input type="text" value="" placeholder="mandatory"></td>
+              <td><input type="text" value="" placeholder="mandatory"></td>
+              <td><input type="button" value="x" data-cmd="delete-row"></td>
+            </tr>
+          </template>
+          <table class=editable flex=1>
+            <colgroup>
+              <col width="100"></col>
+              <col></col>
+              <col width=20></col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Rule Name</th>
+                <th>Rule Value</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="notes">
+          <ul>
+            <li>To have a multi-line value, insert <code>\n</code> code between lines</li>
+            <li>Reserved words:
+              <ul>
+                <li><code>_url_</code>: will be replaced by the page url</li>
+                <li><code>_host_</code>: will be replaced by frame/page host name</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <div id="save" hbox pack="end" align="center">
+      <input type="button" value="Save" data-cmd="save">
+      <span id="info"></span>
+    </div>
+    <script src="/lib/defaults.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
